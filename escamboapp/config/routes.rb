@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     get 'dashboard', to: 'dashboard#index'
   end
 #reduzi ainda mais o link no navegador
-  #get 'dashboard', to: 'backoffice/dashboard#index'
+  get 'backoffice', to: 'backoffice/dashboard#index'
   devise_for :admins
   devise_for :members
 
