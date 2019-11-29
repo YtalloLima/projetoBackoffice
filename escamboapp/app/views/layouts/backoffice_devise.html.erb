@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Escamboapp</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'backoffice', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'backoffice', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
+    <script>
+        FontAwesomeConfig = { searchPseudoElements: true };
+    </script>
+  </head>
+
+  </head>
+ <body id="page-top">
+  <%=  render partial: "layouts/backoffice_shared/sidebar"%>
+  <%=  render partial: "layouts/backoffice_shared/topbar"%>
+        <div class="container-fluid">
+          <h1 class="h3 mb-4 text-gray-800">
+            <%= yield %>
+          </h1>
+        </div>
+      </div>
+     <%=  render partial: "layouts/backoffice_shared/footer"%>
+    </div>
+  </div>
+<%= render partial: "layouts/backoffice_shared/exit_confirmation"%>
+
+</html>
