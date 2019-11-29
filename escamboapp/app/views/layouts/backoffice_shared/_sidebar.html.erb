@@ -17,10 +17,20 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item">
-        <a class="nav-link" href="index.html">
+        <%= link_to backoffice_path do%>
+          <div class="nav-link">
           <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Dashboard</span></a>
+          </div>
+          <%end%>
       </li>
+
+      <li class="nav-item">
+        <%= link_to backoffice_categories_index_path do%>
+          <div class="nav-link">
+            <i class="fas fa-th-list"></i><span>Categorias</span> 
+          </div>
+        <% end %>
+      </li>      
 
       <!-- Divider -->
       <hr class="sidebar-divider">
