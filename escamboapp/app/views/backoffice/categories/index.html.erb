@@ -7,11 +7,13 @@ Categorias
 	<div class="panel-heading">Categorias</div>
 	<div class="panel-body">
 		<div class="table-responsive">
-			<table class= "table-striped table-bordered table-hover">
+			<table class= "table-striped table-bordered table-hover" width="100%">
 			<thead>
 				<tr>
 				<th>#</th>
 				<th>Descrição</th>
+				<th>Editar</th>
+				<th>Excluir</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -19,6 +21,15 @@ Categorias
 				<tr>
 					<td><%= category.id %></td>
 					<td><%= category.description %></td>
+					<td>
+						<!--<a href="#" class="btn btn-info btn-circle"><i class="fas fa-info-circle"></i></a>-->
+                            <button type="button" class="btn btn-primary btn-circle"><i class="far fa-edit"></i>
+                            </button>
+					</td>
+					<td> 
+					         <button type="button" class="btn btn-danger btn-circle"><i class="far fa-trash-alt"></i>
+                            </button>
+                        </td>
 				</tr>
 				<% end %>
 			</tbody>
