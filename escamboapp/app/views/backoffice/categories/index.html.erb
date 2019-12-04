@@ -5,12 +5,17 @@
 Categorias
 <div class="panel panel-default">
 	<div class="panel-heading">
-		Categorias
+		<h1>Categorias</h1>
         <%= link_to new_backoffice_category_path, class:"btn btn-success btn-circle" do %>
             <i class="fas fa-plus"></i>
-        <% end %>
+        <% end %>   
 	</div><br/>
 	<div style=".border-left-primary">ffre</div>
+	<% if notice %>
+        <div class="alert alert-success" role="alert">
+  		<%= notice %>
+		</div>
+    <% end %>
 	<div class="panel-body">
 		<div class="table-responsive">
 			<table class= "table-striped table-bordered table-hover" width="100%">
