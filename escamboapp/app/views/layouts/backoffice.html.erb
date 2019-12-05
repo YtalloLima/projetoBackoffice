@@ -35,5 +35,10 @@
     </div>
   </div>
 <%= render partial: "layouts/backoffice_shared/exit_confirmation"%>
-
+<% if notice %>
+<script type="text/javascript">  
+  $.notify("<%= notice %>", "sucess");
+</script>
+<% end %>
+</body>
 </html>
