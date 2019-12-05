@@ -1,0 +1,27 @@
+<div class="panel panel-default">
+	<div class="panel-heading">
+	<% if @category.errors.any? %>
+        <div class="alert alert-danger" role="alert">
+        <ul>	
+	  		<% @category.errors.full_messages.each do |message| %>
+				<li><%= message %></li>
+	  		<% end %>
+  	    </ul>
+		</div>
+    <% end %>
+	</div>
+	<div class="panel-body">
+	  <div class="form-group">
+	    <%= form_for([:backoffice, @category]) do  |f|%>
+	    <label for="formGroupExampleInput"><b>Descrição</b></label>
+	     <%= f.text_field :description, class:"form-control", id:"formGroupExampleInput", placeholder:"Exemplo Esportes" %>
+	     	<% if (action == "novo") %>
+			<%= f.submit "Nova Categoria" %>
+			<% else %>
+			<%= f.submit "Editar Categoria" %>
+			<% end %>	
+	     
+	    <% end %>
+	  </div>
+	</div>
+</div>	
