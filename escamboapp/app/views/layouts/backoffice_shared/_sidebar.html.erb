@@ -19,7 +19,8 @@
       <li class="nav-item">
         <%= link_to backoffice_path do%>
           <div class="nav-link">
-          <i class="fas fa-fw fa-tachometer-alt"></i><span>Dashboard</span>
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Dashboard</span>
           </div>
           <%end%>
       </li>
@@ -27,11 +28,20 @@
       <li class="nav-item">
         <%= link_to backoffice_categories_path do%>
           <div class="nav-link">
-            <i class="fas fa-th-list"></i><span>Categorias</span> 
+            <i class="fas fa-th-list"></i>
+            <span>Categorias</span> 
           </div>
         <% end %>
       </li>      
 
+      <li class="nav-item">
+        <%= link_to backoffice_admins_path do%>
+          <div class="nav-link">
+            <i class="fas fa-users"></i>
+            <span>Administradores</span> 
+          </div>
+        <% end %>
+      </li>   
       <!-- Divider -->
       <hr class="sidebar-divider">
 
