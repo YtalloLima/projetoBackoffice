@@ -1,0 +1,30 @@
+<div class="panel panel-default">
+	<div class="panel-heading">
+	<% if @admin.errors.any? %>
+        <div class="alert alert-danger" role="alert">
+        <ul>	
+	  		<% @admin.errors.full_messages.each do |message| %>
+				<li><%= message %></li>
+	  		<% end %>
+  	    </ul>
+		</div>
+    <% end %>
+	</div>
+	<div class="panel-body">
+	  <div class="form-group">
+	    <%= form_for([:backoffice, @admin]) do  |f|%>
+	    <label for="formGroupExampleInput"><b>Email</b></label>
+	     <%= f.text_field :email, class:"form-control", id:"formGroupExampleInput", placeholder:"Exemplo joao@gmail.com" %>
+	     <label for="formGroupExampleInput"><b>Senha</b></label>
+	     <%= f.password_field :password, class:"form-control", id:"formGroupExampleInputPass" %>
+	     <label for="formGroupExampleInput"><b>Confirmação de Senha</b></label>
+	     <%= f.password_field :password_confirmation, class:"form-control", id:"formGroupExampleInputPassConf" %>
+	     	<% if (action == "novo") %>
+			<%= f.submit "Salvar Administrador" %>
+			<% else %>
+			<%= f.submit "Editar Administrador" %>
+			<% end %>
+	    <% end %>
+	  </div>
+	</div>
+</div>	
