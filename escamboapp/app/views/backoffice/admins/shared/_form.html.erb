@@ -13,6 +13,8 @@
 	<div class="panel-body">
 	  <div class="form-group">
 	    <%= form_for([:backoffice, @admin]) do  |f|%>
+	    <label for="formGroupExampleInput"><b>Nome</b></label>
+	     <%= f.text_field :name, class:"form-control", id:"formGroupExampleInput", placeholder:"Exemplo João Pedro" %>
 	    <label for="formGroupExampleInput"><b>Email</b></label>
 	     <%= f.text_field :email, class:"form-control", id:"formGroupExampleInput", placeholder:"Exemplo joao@gmail.com" %>
 	     <label for="formGroupExampleInput"><b>Senha</b></label>
