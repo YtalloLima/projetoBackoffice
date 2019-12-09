@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   namespace :backoffice do
     # resources e o nome cria todas as rotas para categories, mas nesse caso, informo que não quero o show e nem destroy
     resources :categories, except: [:show, :destroy]
-    resources :admins, except: [:show, :destroy]
+    resources :admins, except: [:show]
     get 'dashboard', to: 'dashboard#index'
   end
   namespace :site do
