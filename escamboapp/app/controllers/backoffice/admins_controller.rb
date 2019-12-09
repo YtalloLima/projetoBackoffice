@@ -2,7 +2,7 @@ class Backoffice::AdminsController < BackofficeController
 before_action :set_admin, only: [:edit, :update, :destroy] 
 
   def index
-  	@admins = Admin.all
+  	@admins = Admin.order :id
   end
 
   def new
@@ -52,7 +52,7 @@ before_action :set_admin, only: [:edit, :update, :destroy]
   private
 
   def params_admin
-  	params.require(:admin).permit(:name, :email, :password, :password_confirmation)
+  	params.require(:admin).permit(:name, :email, :password, :password_confirmation, :role)
   end
 
   def set_admin
