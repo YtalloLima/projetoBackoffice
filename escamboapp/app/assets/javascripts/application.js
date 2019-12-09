@@ -13,6 +13,7 @@
 //= require jquery/dist/jquery
 //= require jquery.easing/jquery.easing
 //= require bootstrap/dist/js/bootstrap
+//= require bootbox
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
